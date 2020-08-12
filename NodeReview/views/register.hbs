@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register a new account</title>
+    
+</head>
+<body>
+    <form action="/doRegister" method="post" onsubmit="return checkForm();">
+        Name <input type="text" name="txtName" id="txtName" >
+        <br>
+        Email <input type="text" name="txtEmail" id="txtEmail">
+        <br>
+        <input type="submit" value="Register" >
+    </form> 
+    <script>
+        function checkForm(){
+            let name = document.getElementById('txtName').value;
+            let email = document.getElementById('txtEmail').value;
+            if( name.trim().length==0 || email.trim().length==0){
+                alert('Sorry, hay nhap du du lieu!')
+                return false;
+            }          
+        }
+    </script>
+</body>
+</html>
